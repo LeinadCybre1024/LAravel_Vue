@@ -9,7 +9,11 @@
 </template>
 <script>
 import { ref } from 'vue'
+import Header from './components/Header.vue'
 export default {
+  components : {
+  Header
+},
   setup() {
     const count = ref(0)
 

@@ -1,4 +1,6 @@
 <template>
+    <Header />
+    <router-view />
     <div class="container w-100 m-auto text-center mt-3">
         <h1 class="text-danger">Laravel vue todo list</h1>
         <add-item-form v-on:reloadlist="getItems()" />
@@ -13,10 +15,12 @@
 <script>
 import addItemForm from "./addItemForm.vue";
 import listView from "./listView.vue";
+import Header from './Header.vue'
 import axios from 'axios';
 
 export default {
     components: {
+        Header,
         addItemForm,
         listView
     },
