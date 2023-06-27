@@ -25,12 +25,23 @@ services:
         depends_on:
             - mysql
     vue:
-        image: node:lts-alpine
+        image: 'node:lts-alpine'
         working_dir: /var/www/html
         volumes:
-            - ./:/var/www/html
+            - './:/var/www/html'
         networks:
             - sail
+    phpmyadmin:
+        depends_on:
+            - mysql
+        image: phpmyadmin/phpmyadmin
+        environment:
+            - PMA_HOST=mysql
+            - PMA_PORT=3306
+        networks:
+            - sail
+        ports:
+            - 8001:80
     mysql:
         image: 'mysql/mysql-server:8.0'
         ports:
