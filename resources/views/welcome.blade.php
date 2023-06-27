@@ -8,8 +8,9 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-        <!-- bootstrap  -->
-        @vite('resources/css/app.css')
+        
+        <link href="{{asset('vue/assets/app-5af190e0.css') }}" rel="stylesheet"/>
+        <link href="{{asset('vue/assets/app-5bfb470f.css') }}" rel="stylesheet"/>
 
 
         <!-- Styles -->
@@ -28,6 +29,7 @@
             <App/>
         </div>
 
-        @vite('resources/js/app.js')
+      
+          <script src="{{ asset('vue/assets/app-57906d2f.js') }}"></script>
     </body>
 </html>

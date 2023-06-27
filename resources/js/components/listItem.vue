@@ -15,13 +15,16 @@
 
 <script>
 import axios from 'axios';
+const api = axios.create({
+  baseURL: '/', // Set the baseURL to the root URL of your server or API
+});
 
 export default {
     props: ["item"],
     methods: {
         updateCheck() {
             axios
-                .put(`api/item/${this.item.id}`, {
+                .put(`/api/item/${this.item.id}`, {
                     item: this.item
                 })
                 .then(res => {
@@ -35,7 +38,7 @@ export default {
         },
         removeItem() {
             axios
-                .delete(`api/item/${this.item.id}`)
+                .delete(`/api/item/${this.item.id}`)
                 .then(res => {
                     if (res.status == 200) {
                         this.$emit("itemchanged");

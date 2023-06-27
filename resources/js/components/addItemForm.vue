@@ -19,6 +19,9 @@
 </template>
 <script>
 import axios from 'axios';
+const api = axios.create({
+  baseURL: '/', // Set the baseURL to the root URL of your server or API
+});
 
 export default {
     data: function() {
@@ -34,7 +37,7 @@ export default {
                 return;
             }
             axios
-                .post("api/item/store", {
+                .post("/api/item/store", {
                     item: this.item
                 })
                 .then(res => {

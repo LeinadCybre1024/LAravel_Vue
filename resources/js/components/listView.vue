@@ -18,6 +18,10 @@
 import listItem from "./listItem.vue";
 import axios from 'axios';
 
+const api = axios.create({
+  baseURL: '/', // Set the baseURL to the root URL of your server or API
+});
+
 export default {
     components: {
         listItem
