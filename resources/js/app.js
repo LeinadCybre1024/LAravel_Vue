@@ -1,7 +1,8 @@
-import './bootstrap';
+import { createApp } from 'vue';
+import App from './components/app.vue';
 
-import {createApp} from 'vue'
+// Importing Bootstrap and Popper.js is not necessary for Vue 3
 
-import App from './App.vue'
+const app = createApp(App);
 
-createApp(App).mount('#app')
+app.mount('#app');
