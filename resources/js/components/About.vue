@@ -12,5 +12,6 @@ export default {
 div {
     background-color: darkseagreen;
     color: white;
+    margin: 5px;
 }
 </style>

@@ -12,5 +12,6 @@ export default {
 div {
     background-color: coral;
     color: white;
+    margin: 5px;
 }
 </style>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmployeeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
@@ -25,3 +26,11 @@ Route::prefix('/item')->group(function(){
     Route::put('/{id}' , [ItemController::class, 'update']);
     Route::delete('/{id}', [ItemController::class, 'destroy'] );
 });
+
+Route::get('/employees',[EmployeeController::class, 'index']);
+
+Route::post('/save',[EmployeeController::class, 'store']);
+
+Route::put('/update/{id}',[EmployeeController::class, 'update']);
+
+Route::delete('/delete/{id}',[EmployeeController::class, 'destroy']);
