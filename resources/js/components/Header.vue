@@ -1,11 +1,28 @@
 <template>
-    <h1 class="p-4">Welcome To My Vue Project</h1>
-    <div class="p-4">
-        <router-link to="/">Home</router-link> |
-        <router-link to="/dashboard">To Do</router-link> |
-        <router-link to="/employee">Employee</router-link> |
-        <router-link to="/about">About</router-link>
-    </div>
+     <nav>
+      <div class="container mx-auto px-6 py-2 flex justify-between items-center">
+        <a class="font-bold text-2xl lg:text-4xl" href="#">
+          SHMW
+        </a>
+        <div class="block lg:hidden">
+          <button class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:block">
+          <ul class="inline-flex">
+            <li><router-link to="/">Home</router-link> </li>
+            <li><router-link to="/dashboard">To Do</router-link></li>
+            <li><router-link to="/employee">Employee</router-link> </li>
+            <li><router-link to="/about">About</router-link></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+   
 </template>
 
 <script>
